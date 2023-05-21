@@ -3,8 +3,8 @@ class Map:
         self.default_image = 'source/derevo.jpg'
         self.default_model = 'source/block.egg'
         self.create_branch()
-        for x in range (10):
-            for y in range (10, 20):
+        for x in range(10):
+            for y in range(10, 20):
                 for z in range(-5, -3):
                     self.create_block((x, y, z))
 
