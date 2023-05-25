@@ -3,6 +3,8 @@ class Map:
         self.default_image = 'source/derevo.jpg'
         self.default_model = 'source/block.egg'
         self.create_branch()
+        self.blocks = []
+
         for x in range(10):
             for y in range(10, 20):
                 for z in range(-5, -3):
@@ -14,6 +16,7 @@ class Map:
         self.model.setTexture(self.texture)
         self.model.setPos(position)
         self.model.reparentTo(self.branch)
+        self.blocks.append(self.model)
 
     def create_branch(self):
         self.branch = render.attachNewNode('map_branch')
